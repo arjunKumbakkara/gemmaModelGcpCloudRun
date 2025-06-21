@@ -1,4 +1,4 @@
-#Gemma Models to Google Cloud Run 
+# Gemma Models to Google Cloud Run 
 This documentation will take you through the  deployment of Google Gemma large language models on Google Cloud Run using pre-configured containers. The containers utilize Ollama as the serving framework and include built-in compatibility with both Google GenAI SDK and OpenAI SDK. You can use these containers as-is or customize them with your own fine-tuned models.
 
 Available Models and Container Images
