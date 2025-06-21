@@ -1,25 +1,26 @@
-# Deploying Gemma Models to Google Cloud Run
+#Gemma Models to Google Cloud Run 
+This documentation will take you through the  deployment of Google Gemma large language models on Google Cloud Run using pre-configured containers. The containers utilize Ollama as the serving framework and include built-in compatibility with both Google GenAI SDK and OpenAI SDK. You can use these containers as-is or customize them with your own fine-tuned models.
 
-This guide shows you how to deploy Google Gemma LLM to Google Cloud Run. These pre-built containers leverage Ollama for serving, with additional added support for the Google GenAI SDK . Use off the shelf, or fine-tune for your own use-cases.  These containers have both Google GenAI SDK and OpenAI SDK compatible.
+Available Models and Container Images
+The service currently supports these Gemma model variants:
+gemma-3-1b-it
+gemma-3-4b-it
+gemma-3-12b-it
+gemma-3-27b-it
 
-## Supported Models and Pre-Built Docker Images
-Our service supports the following Gemma models:
-* gemma-3-1b-it
-* gemma-3-4b-it
-* gemma-3-12b-it
-* gemma-3-27b-it
-
+For instructions on deploying custom fine-tuned models, refer to the section on deploying fine-tuned Gemma3 models below.
 You can provide your own fine-tuned models following [section below](#deploying-and-using-fine-tuned-gemma3-models)
 
+## Quickstart - Deploying to Cloud Run
+This section guides you through deploying a Cloud Run service using our provided Docker images.  If you've deployed Gemma to Cloud Run from AI Studio, it mirrors this process.    
+
 ### Pre-built Docker Images
-We provide pre-built Docker images for convenience. These images have the respective Gemma models bundled:
+The pre-built Docker images for convenience. These images have the respective Gemma models bundled:
 * `us-docker.pkg.dev/cloudrun/container/gemma/gemma3-1b`
 * `us-docker.pkg.dev/cloudrun/container/gemma/gemma3-4b`
 * `us-docker.pkg.dev/cloudrun/container/gemma/gemma3-12b`
 * `us-docker.pkg.dev/cloudrun/container/gemma/gemma3-27b`
-
-## Quickstart - Deploying to Cloud Run
-This section guides you through deploying a Cloud Run service using our provided Docker images.  If you've deployed Gemma to Cloud Run from AI Studio, it mirrors this process.    
+  
 
 ```bash
 export SERVICE_NAME=gemmaworkshopapp
