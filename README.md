@@ -251,13 +251,11 @@ stream = client.chat(
 for chunk in stream:
   print(chunk['message']['content'], end='', flush=True)
 
-#Example: Image Input
-#Download the image - https://github.com/ranasaurus9/gemma2025workshop/blob/main/pexels-photo-32457275.jpg
 
 from pathlib import Path
 
 # Pass in the path to the image
-path = 'pexels-photo-32457275.jpg'
+path = 'stoicking.jpg'
 
 # You can also pass in base64 encoded image data
 # img = base64.b64encode(Path(path).read_bytes()).decode()
